@@ -5,17 +5,5 @@
     "name": "heroku_a913dfa1f967a2b",
     "username": "b5f878f7c45f97",
     "password": "797a8dc9"
-  },
-  "firebase": {
-    "api_key": "YOUR FIREBASE PROJECT's API KEY",
-    "type": "YOUR FIREBASE PROJECT's TYPE",
-    "project_id": "YOUR FIREBASE PROJECT's ID",
-    "private_key_id": "YOUR FIREBASE PROJECT's PRIVATE KEY ID",
-    "private_key": "YOUR FIREBASE PROJECT's PRIVATE KEY",
-    "client_email": "YOUR FIREBASE PROJECT's CLIENT EMAIL",
-    "client_id": "YOUR FIREBASE PROJECT's CLIENT ID",
-    "auth_uri": "YOUR FIREBASE PROJECT's AUTH URI",
-    "token_uri": "YOUR FIREBASE PROJECT's TOKEN URI",
-    "auth_provider_x509_cert_url": "YOUR FIREBASE PROJECT's AUTH PROVIDER X509 CERT URL"
   }
 }

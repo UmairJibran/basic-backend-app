@@ -60,73 +60,11 @@ var config = convict({
       env: "DB_PASSWORD",
     },
   },
-  firebase: {
-    api_key: {
-      doc: "API Key for Authentication",
-      format: String,
-      default: "",
-      env: "FIREBASE_API_KEY",
-    },
-    type: {
-      doc: "Type of Firebase",
-      format: String,
-      default: "",
-      env: "FIREBASE_TYPE",
-    },
-    project_id: {
-      doc: "Project Id of Firebase",
-      format: String,
-      default: "",
-      env: "FIREBASE_PROJECT_ID",
-    },
-    private_key_id: {
-      doc: "Private Key Id for Firebase",
-      format: String,
-      default: "",
-      env: "FIREBASE_PRIVATE_KEY_ID",
-    },
-    private_key: {
-      doc: "Private Key for Firebase",
-      format: String,
-      default: "",
-      env: "FIREBASE_PRIVATE_KEY",
-    },
-    client_email: {
-      doc: "Client Email for Firebase",
-      format: String,
-      default: "",
-      env: "FIREBASE_CLIENT_EMAIL",
-    },
-    client_id: {
-      doc: "Client ID for Firebase",
-      format: String,
-      default: "",
-      env: "FIREBASE_CLIENT_ID",
-    },
-    auth_uri: {
-      doc: "auth uri for Firebase",
-      format: String,
-      default: "",
-      env: "FIREBASE_AUTH_URI",
-    },
-    token_uri: {
-      doc: "token uri for Firebase",
-      format: String,
-      default: "",
-      env: "FIREBASE_TOKEN_URI",
-    },
-    auth_provider_x509_cert_url: {
-      doc: "Auth Provide for Firebase",
-      format: String,
-      default: "",
-      env: "FIREBASE_AUTH_PROVIDER_CERT_URL",
-    },
-    client_x509_cert_url: {
-      doc: "Client Cert URL for Firebase",
-      format: String,
-      default: "",
-      env: "FIREBASE_CLIENT_CERT_URL",
-    },
+  secretKey: {
+    doc: "Secret to validate JWT Tokens",
+    format: "string",
+    default: "LaiwV87cidshEBP8aUtsZbsnL0wAsdZhWhheTSg8",
+    env: "JWT_TOKEN",
   },
 });
 

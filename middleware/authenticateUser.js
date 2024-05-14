@@ -1,4 +1,4 @@
-const { auth } = require("../firebase");
+const { verifyToken } = require("../util/auth");
 const config = require("../config");
 
 const authenticateUser = async (req, res, next) => {
@@ -10,16 +10,21 @@ const authenticateUser = async (req, res, next) => {
     }
 
     if (headerToken && headerToken.split(" ")[0] !== "Bearer") {
-      res.status(401).send({ message: "Invalid token" });
+      return res.status(401).send({ message: "Invalid token" });
     }
 
     let token = headerToken.split(" ")[1];
-    await auth.verifyIdToken(token);
+    const tokenContent = verifyToken(token);
 
-    next();
+    if (tokenContent) {
+      req.user = tokenContent;
+      return next();
+    } else {
+      return res.status(403).send({ message: "Could not authorize" });
+    }
   } catch (error) {
     req.log.error(error);
-    res.status(403).send({ message: "Could not authorize" });
+    return res.status(403).send({ message: "Could not authorize" });
   }
 };
 
