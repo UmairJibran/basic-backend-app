@@ -1,7 +1,7 @@
 const jwt = require("jsonwebtoken");
 const config = require("../config");
 
-const firebase = { auth: {} };
+const jwtToken = { auth: {} };
 
 // Function to generate JWT token
 const generateToken = (payload) => {
@@ -18,7 +18,7 @@ const verifyToken = (token) => {
   }
 };
 
-firebase.generateToken = generateToken;
-firebase.verifyToken = verifyToken;
+jwtToken.generateToken = generateToken;
+jwtToken.verifyToken = verifyToken;
 
-module.exports = firebase;
+module.exports = jwtToken;
